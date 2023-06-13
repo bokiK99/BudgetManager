@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "463522425455",
+    "project_id": "budgetmanager-dd66b",
+    "storage_bucket": "budgetmanager-dd66b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463522425455:android:6f3f6b8ee1a67691e07b9a",
+        "android_client_info": {
+          "package_name": "hr.ferit.bojankojcinovic.aplikacijaaa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463522425455-nn39j4mmfpoaba0hsodi2aqialfpgqo7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnb7fOvwad-T_Rk2CctkpaDixEc0APuLc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463522425455-nn39j4mmfpoaba0hsodi2aqialfpgqo7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
