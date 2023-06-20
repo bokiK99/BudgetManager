@@ -11,78 +11,77 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textViewTotalExpenses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="10dp"
-            android:text="Ukupni troškovi"
+            android:text="@string/textViewTotalExpensesPlaceholder"
             app:layout_constraintBottom_toTopOf="@+id/DetailButton"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalIncome" />
 
         <TextView
             android:id="@+id/textViewTotalIncome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
-            android:text="Ukupni prihodi"
-            app:layout_constraintBottom_toTopOf="@+id/textView6"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:text="@string/textViewTotalIncomePlaceholder"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTotalExpenses"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transactionList" />
 
         <TextView
-            android:id="@+id/emailView"
+            android:id="@+id/textViewEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Ime i prezime"
+            android:layout_marginTop="10dp"
+            android:text="@string/textViewEmailPlaceholder"
+            app:layout_constraintBottom_toTopOf="@+id/textViewTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Broj računa"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailView" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:capitalize="none"
-            android:text="Stanje na računu"
+            android:layout_marginTop="10dp"
+            android:text="@string/textViewTitleText"
             android:textSize="20sp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/transactionList"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/transactionList"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="10dp"
             app:layout_constraintBottom_toTopOf="@+id/textViewTotalIncome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
         <Button
             android:id="@+id/DetailButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Detalji"
+            android:layout_marginEnd="3dp"
+            android:text="@string/DetailButtonText"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/NewTransactionButton"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/NewTransactionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nova transakcija"
+            android:text="@string/NewTransactionButtonText"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/LogOutButton"
             app:layout_constraintStart_toEndOf="@+id/DetailButton" />
@@ -91,10 +90,12 @@
             android:id="@+id/LogOutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="10dp"
-            android:text="Odjava"
+            android:text="@string/LogOutButtonText"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/NewTransactionButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

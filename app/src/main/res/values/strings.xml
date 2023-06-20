@@ -1,5 +1,34 @@
 <resources>
     <string name="app_name">aplikacijaaa</string>
+    <!--Login fragment-->
+    <string name="EditTextEmailHint">primjer@primjer.com</string>
+    <string name="EditTextPasswordHint">lozinka</string>
+    <string name="LogInButtonText">Prijava</string>
+    <string name="SignUpButtonText">Registracija</string>
+    <!--Signup fragment-->
+    <string name="TextViewSignupTitleText">Registracija</string>
+    <string name="EditTextPasswordConfirmHint">Potvrdi lozinku</string>
+    <string name="FinishSignupButtonText">Završi registraciju</string>
+    <string name="TextViewPasswordHelpText">Lozinka mora imati barem 6 znakova!</string>
+    <!--Main fragment-->
+    <string name="textViewEmailPlaceholder">Vaša e-mail adresa</string>
+    <string name="textViewTitleText">Vaši prihodi i troškovi</string>
+    <string name="textViewTotalIncomePlaceholder">Ukupni prihodi</string>
+    <string name="textViewTotalExpensesPlaceholder">Ukupni troškovi</string>
+    <string name="DetailButtonText">Detalji</string>
+    <string name="NewTransactionButtonText">Nova transakcija</string>
+    <string name="LogOutButtonText">Odjava</string>
+    <!--New transaction fragment-->
+    <string name="textViewNewTransactionFragTitleText">Nova transakcija</string>
+    <string name="RadioButtonIncomeText">Prihod</string>
+    <string name="RadioButtonExpenseText">Trošak</string>
+    <string name="EditTextTransactionNameHint">John Doe</string>
+    <string name="EditTextTransactionAmountHint">123</string>
+    <string name="EditTextTransactionNoteHint">Primjer</string>
+    <string name="SaveTransactionButtonText">Spremi transakciju</string>
+    <string name="CancelButtonText">Odustani</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>

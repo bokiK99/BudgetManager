@@ -10,35 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/TextInputAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Iznos"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TextInputName" />
-
-        <EditText
-            android:id="@+id/TextInputName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Primatelj/Pošiljatelj"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroupType" />
-
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textViewNewTransactionFragTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Nova transakcija"
+            android:text="@string/textViewNewTransactionFragTitleText"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -51,47 +28,78 @@
             android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4">
+            app:layout_constraintTop_toBottomOf="@+id/textViewNewTransactionFragTitle">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/radioButtonIncome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Prihod" />
+                android:text="@string/RadioButtonIncomeText" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/radioButtonExpense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Trošak" />
+                android:text="@string/RadioButtonExpenseText" />
         </RadioGroup>
 
         <EditText
-            android:id="@+id/TextInputNote"
+            android:id="@+id/EditTextTransactionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/EditTextTransactionNameHint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupType" />
+
+        <EditText
+            android:id="@+id/EditTextTransactionAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Napomena"
+            android:hint="@string/EditTextTransactionAmountHint"
+            android:inputType="textPersonName|numberDecimal"
+            android:minHeight="48dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TextInputAmount" />
+            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionName"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/EditTextTransactionNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/EditTextTransactionNoteHint"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#757575"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionAmount" />
 
         <Button
             android:id="@+id/SaveTransactionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:text="Spremi transakciju"
+            android:text="@string/SaveTransactionButtonText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/TextInputNote" />
+            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionNote" />
 
         <Button
             android:id="@+id/CancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Odustani"
+            android:text="@string/CancelButtonText"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

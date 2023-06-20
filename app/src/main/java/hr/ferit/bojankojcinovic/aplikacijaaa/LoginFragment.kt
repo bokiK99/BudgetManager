@@ -33,13 +33,11 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         auth = Firebase.auth
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_loginfrag, container, false)
-
+        val view = inflater.inflate(R.layout.fragment_login, container, false)
         val loginButton = view.findViewById<Button>(R.id.LoginButton)
-
-        val emailEditText = view.findViewById<EditText>(R.id.editTextEmail)
-        val passwordEditText = view.findViewById<EditText>(R.id.editTextTextPassword)
+        val emailEditText = view.findViewById<EditText>(R.id.editTextEmailLogin)
+        val passwordEditText = view.findViewById<EditText>(R.id.editTextPasswordLogin)
+        val signUpButton = view.findViewById<Button>(R.id.SignUpButton)
 
 
         loginButton.setOnClickListener{
@@ -47,11 +45,9 @@ class LoginFragment : Fragment() {
                 auth.signInWithEmailAndPassword(emailEditText.text.toString(), passwordEditText.text.toString())
                     .addOnCompleteListener(currentActivity) { task ->
                         if (task.isSuccessful) {
-                            // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success")
                             goToMain()
                         } else {
-                            // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
                             Toast.makeText(
                                 this@LoginFragment.activity,
@@ -61,6 +57,9 @@ class LoginFragment : Fragment() {
                         }
                     }
             }
+        }
+        signUpButton.setOnClickListener{
+            goToSignup()
         }
         return view
     }
@@ -73,6 +72,15 @@ class LoginFragment : Fragment() {
         fragmentTransaction?.replace(R.id.fragmentContainerView, fragment)
         fragmentTransaction?.commit()
     }
+    private fun goToSignup() {
+        val fragment = SignupFragment()
+
+        val fragmentTransaction: FragmentTransaction? =
+            activity?.supportFragmentManager?.beginTransaction()
+        fragmentTransaction?.replace(R.id.fragmentContainerView, fragment)
+        fragmentTransaction?.commit()
+    }
+
 
 
 }

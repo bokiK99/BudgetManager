@@ -27,13 +27,13 @@ class MainFragment : Fragment(), TransactionRecyclerAdapter.ContentListener {
     ): View? {
 
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_mainfrag, container, false)
+        val view = inflater.inflate(R.layout.fragment_main, container, false)
 
         val detailButton = view.findViewById<Button>(R.id.DetailButton)
         val newTransactionButton = view.findViewById<Button>(R.id.NewTransactionButton)
         val logOutButton = view.findViewById<Button>(R.id.LogOutButton)
 
-        val detailLabel = view.findViewById<TextView>(R.id.emailView)
+        val detailLabel = view.findViewById<TextView>(R.id.textViewEmail)
         detailLabel.text = ("Email: " + auth.currentUser?.email)
 
         detailButton.setOnClickListener {

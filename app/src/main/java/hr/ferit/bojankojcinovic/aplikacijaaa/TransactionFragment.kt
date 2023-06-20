@@ -25,15 +25,16 @@ class TransactionFragment : Fragment() {
             savedInstanceState: Bundle?
         ): View? {
             // Inflate the layout for this fragment
-            val view = inflater.inflate(R.layout.fragment_transactionfrag, container, false)
+            val view = inflater.inflate(R.layout.fragment_new_transaction, container, false)
 
             val saveTransactionButton = view.findViewById<Button>(R.id.SaveTransactionButton)
             val cancelButton = view.findViewById<Button>(R.id.CancelButton)
 
             saveTransactionButton.setOnClickListener {
-                val name = view.findViewById<EditText>(R.id.TextInputName).text.toString()
-                val amount = view.findViewById<EditText>(R.id.TextInputAmount).text.toString().toDouble()
-                val note = view.findViewById<EditText>(R.id.TextInputNote).text.toString()
+
+                val name = view.findViewById<EditText>(R.id.EditTextTransactionName).text.toString()
+                val amount = view.findViewById<EditText>(R.id.EditTextTransactionAmount).text.toString().toDouble()
+                val note = view.findViewById<EditText>(R.id.EditTextTransactionNote).text.toString()
                 val userId = auth.currentUser?.uid
                 val transaction=Transactions(name, amount, note, userId)
                 db.collection("transactions")

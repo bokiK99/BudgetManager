@@ -15,7 +15,7 @@ class DetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_detailfrag, container, false)
+        val view = inflater.inflate(R.layout.fragment_details, container, false)
 
         val backButton= view.findViewById<Button>(R.id.BackButton)
 
