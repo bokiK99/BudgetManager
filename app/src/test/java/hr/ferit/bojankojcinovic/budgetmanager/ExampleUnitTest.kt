@@ -1,4 +1,4 @@
-package hr.ferit.bojankojcinovic.aplikacijaaa
+package hr.ferit.bojankojcinovic.budgetmanager
 
 import org.junit.Test
 

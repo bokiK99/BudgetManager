@@ -14,23 +14,28 @@
             android:id="@+id/textViewTotalExpenses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
             android:text="@string/textViewTotalExpensesPlaceholder"
-            app:layout_constraintBottom_toTopOf="@+id/DetailButton"
+            android:textColor="#F60505"
+            app:layout_constraintBottom_toTopOf="@+id/NewTransactionButton"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewTotalIncome" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalIncome"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textViewTotalIncome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:text="@string/textViewTotalIncomePlaceholder"
+            android:textColor="#4CAF50"
             app:layout_constraintBottom_toTopOf="@+id/textViewTotalExpenses"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/transactionList" />
+            app:layout_constraintTop_toBottomOf="@+id/transactionList"
+            tools:ignore="TextContrastCheck" />
 
         <TextView
             android:id="@+id/textViewEmail"
@@ -67,24 +72,17 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
         <Button
-            android:id="@+id/DetailButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="3dp"
-            android:text="@string/DetailButtonText"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/NewTransactionButton"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
             android:id="@+id/NewTransactionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#00CC00"
             android:text="@string/NewTransactionButtonText"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/LogOutButton"
-            app:layout_constraintStart_toEndOf="@+id/DetailButton" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/LogOutButton"
@@ -92,10 +90,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="10dp"
+            android:backgroundTint="#FF0000"
             android:text="@string/LogOutButtonText"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/NewTransactionButton" />
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/NewTransactionButton"
+            tools:ignore="TextContrastCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

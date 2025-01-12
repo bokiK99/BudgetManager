@@ -1,4 +1,4 @@
-package hr.ferit.bojankojcinovic.aplikacijaaa
+package hr.ferit.bojankojcinovic.budgetmanager
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -14,6 +14,8 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import hr.ferit.bojankojcinovic.aplikacijaaa.MainFragment
+import hr.ferit.bojankojcinovic.aplikacijaaa.R
 
 
 class SignupFragment : Fragment() {
@@ -29,14 +31,21 @@ class SignupFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_signup, container, false)
         val finishSignupButton = view.findViewById<Button>(R.id.FinishSignupButton)
         val cancelSignupButton = view.findViewById<Button>(R.id.CancelSignupButton)
-        val password = view.findViewById<EditText>(R.id.editTextPasswordSignUp).text.toString()
-        val passwordConfirmation = view.findViewById<EditText>(R.id.editTextPasswordConfirm).text.toString()
-        val emailSignup = view.findViewById<EditText>(R.id.editTextEmailSignUp).text.toString()
+        val passwordEditText = view.findViewById<EditText>(R.id.editTextPasswordSignUp)
+        val passwordConfirmationEditText = view.findViewById<EditText>(R.id.editTextPasswordConfirm)
+        val emailEditText = view.findViewById<EditText>(R.id.editTextEmailSignUp)
 
         finishSignupButton.setOnClickListener{
-            if(password == passwordConfirmation){
+            if (emailEditText.text.toString() == "" || passwordEditText.text.toString() == "" || passwordConfirmationEditText.text.toString() == "") {
+                Toast.makeText(
+                    this@SignupFragment.activity,
+                    "Prazno polje za unos",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+            if(passwordEditText.text.toString() == passwordConfirmationEditText.text.toString() && passwordEditText.text.toString() != "" ){
                 activity?.let { currentActivity ->
-                    auth.createUserWithEmailAndPassword(emailSignup, password)
+                    auth.createUserWithEmailAndPassword(emailEditText.text.toString(), passwordEditText.text.toString())
                         .addOnCompleteListener(currentActivity) { task ->
                             if (task.isSuccessful) {
                                 Log.d(TAG, "createUserWithEmail:success")
@@ -55,7 +64,7 @@ class SignupFragment : Fragment() {
                             }
                         }
                 }
-            }else{
+            }else if( passwordEditText.text.toString() != passwordConfirmationEditText.text.toString()){
                 Toast.makeText(this@SignupFragment.activity,
                     "Lozinke se ne poklapaju",
                     Toast.LENGTH_SHORT,

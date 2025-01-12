@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">aplikacijaaa</string>
+    <string name="app_name">BudgetManager</string>
     <!--Login fragment-->
+    <string name="LogoDescription">Logo aplikacije</string>
     <string name="EditTextEmailHint">primjer@primjer.com</string>
-    <string name="EditTextPasswordHint">lozinka</string>
+    <string name="EditTextPasswordHint">Lozinka</string>
     <string name="LogInButtonText">Prijava</string>
     <string name="SignUpButtonText">Registracija</string>
     <!--Signup fragment-->
@@ -15,20 +16,25 @@
     <string name="textViewTitleText">Vaši prihodi i troškovi</string>
     <string name="textViewTotalIncomePlaceholder">Ukupni prihodi</string>
     <string name="textViewTotalExpensesPlaceholder">Ukupni troškovi</string>
-    <string name="DetailButtonText">Detalji</string>
     <string name="NewTransactionButtonText">Nova transakcija</string>
     <string name="LogOutButtonText">Odjava</string>
     <!--New transaction fragment-->
     <string name="textViewNewTransactionFragTitleText">Nova transakcija</string>
     <string name="RadioButtonIncomeText">Prihod</string>
     <string name="RadioButtonExpenseText">Trošak</string>
-    <string name="EditTextTransactionNameHint">John Doe</string>
-    <string name="EditTextTransactionAmountHint">123</string>
-    <string name="EditTextTransactionNoteHint">Primjer</string>
+    <string name="EditTextTransactionNameHint">Primatelj/Pošiljatelj</string>
+    <string name="EditTextTransactionAmountHint">Iznos u eurima (bez znaka)</string>
+    <string name="EditTextTransactionNoteHint">Primjer bilješke</string>
     <string name="SaveTransactionButtonText">Spremi transakciju</string>
     <string name="CancelButtonText">Odustani</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Recycler item-->
+    <string name="RecieverOrSenderPlaceholder">Primatelj/Pošiljatelj</string>
+    <string name="TransactionTypePlaceholder">Prihod/Trošak</string>
+    <string name="TransactionNotePlaceholder">Napomena</string>
+    <string name="TransactionAmountPlaceholder">Iznos</string>
+    <string name="EditButtonDescription">Uredi</string>
+    <string name="DeleteButtonDescription">Obriši</string>
+
 
 
 </resources>

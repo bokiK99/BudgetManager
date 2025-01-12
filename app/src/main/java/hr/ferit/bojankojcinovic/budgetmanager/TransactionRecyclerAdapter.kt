@@ -1,13 +1,12 @@
-package hr.ferit.bojankojcinovic.aplikacijaaa
+package hr.ferit.bojankojcinovic.budgetmanager
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import hr.ferit.bojankojcinovic.aplikacijaaa.R
 
 enum class ItemClickType {
     EDIT,
@@ -45,6 +44,8 @@ class TransactionRecyclerAdapter (
     }
 
     class TransactionsViewHolder(val view: View): RecyclerView.ViewHolder(view) {
+        private val transactionType =
+            view.findViewById<TextView>(R.id.transactionType)
         private val transactionName =
             view.findViewById<TextView>(R.id.transactionName)
         private val transactionAmount =
@@ -60,14 +61,13 @@ class TransactionRecyclerAdapter (
             listener: ContentListener,
             transaction: Transactions
         ) {
+            transactionType.setText(transaction.type)
             transactionName.setText(transaction.name)
             transactionNotice.setText(transaction.note)
-            transactionAmount.setText(transaction.amount.toString())
+            transactionAmount.setText(transaction.amount.toString() + "€")
 
 
             editBtn.setOnClickListener {
-                transaction.name = transactionName.text.toString()
-                transaction.note = transactionNotice.text.toString()
                 listener.onItemButtonClick(index, transaction,
                     ItemClickType.EDIT)
             }

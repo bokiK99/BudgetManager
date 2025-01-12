@@ -1,4 +1,4 @@
-package hr.ferit.bojankojcinovic.aplikacijaaa
+package hr.ferit.bojankojcinovic.budgetmanager
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -14,6 +14,8 @@ import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import hr.ferit.bojankojcinovic.aplikacijaaa.MainFragment
+import hr.ferit.bojankojcinovic.aplikacijaaa.R
 
 class LoginFragment : Fragment() {
 
@@ -40,22 +42,33 @@ class LoginFragment : Fragment() {
         val signUpButton = view.findViewById<Button>(R.id.SignUpButton)
 
 
-        loginButton.setOnClickListener{
-            activity?.let { currentActivity ->
-                auth.signInWithEmailAndPassword(emailEditText.text.toString(), passwordEditText.text.toString())
-                    .addOnCompleteListener(currentActivity) { task ->
-                        if (task.isSuccessful) {
-                            Log.d(TAG, "signInWithEmail:success")
-                            goToMain()
-                        } else {
-                            Log.w(TAG, "signInWithEmail:failure", task.exception)
-                            Toast.makeText(
-                                this@LoginFragment.activity,
-                                "Authentication failed.",
-                                Toast.LENGTH_SHORT,
-                            ).show()
+        loginButton.setOnClickListener {
+            if (emailEditText.text.toString() == "" || passwordEditText.text.toString() == "") {
+                Toast.makeText(
+                    this@LoginFragment.activity,
+                    "Prazno polje za unos",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                activity?.let { currentActivity ->
+                    auth.signInWithEmailAndPassword(
+                        emailEditText.text.toString(),
+                        passwordEditText.text.toString()
+                    )
+                        .addOnCompleteListener(currentActivity) { task ->
+                            if (task.isSuccessful) {
+                                Log.d(TAG, "signInWithEmail:success")
+                                goToMain()
+                            } else {
+                                Log.w(TAG, "signInWithEmail:failure", task.exception)
+                                Toast.makeText(
+                                    this@LoginFragment.activity,
+                                    "Authentication failed.",
+                                    Toast.LENGTH_SHORT,
+                                ).show()
+                            }
                         }
-                    }
+                }
             }
         }
         signUpButton.setOnClickListener{

@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textViewNewTransactionFragTitle"
+            android:id="@+id/textViewEditTransactionFragTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -22,31 +22,31 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <RadioGroup
-            android:id="@+id/radioGroupType"
+            android:id="@+id/radioGroupType2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:checkedButton="@id/radioButtonIncome2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewNewTransactionFragTitle">
+            app:layout_constraintTop_toBottomOf="@+id/textViewEditTransactionFragTitle">
 
             <RadioButton
-                android:id="@+id/radioButtonIncome"
+                android:id="@+id/radioButtonIncome2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="@string/RadioButtonIncomeText" />
 
             <RadioButton
-                android:id="@+id/radioButtonExpense"
+                android:id="@+id/radioButtonExpense2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/RadioButtonExpenseText" />
         </RadioGroup>
 
         <EditText
-            android:id="@+id/EditTextTransactionName"
+            android:id="@+id/EditTextTransactionName2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -59,10 +59,10 @@
             android:textColorHint="#757575"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroupType" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupType2" />
 
         <EditText
-            android:id="@+id/EditTextTransactionAmount"
+            android:id="@+id/EditTextTransactionAmount2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -74,10 +74,10 @@
             android:textColorHint="#757575"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionName" />
+            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionName2" />
 
         <EditText
-            android:id="@+id/EditTextTransactionNote"
+            android:id="@+id/EditTextTransactionNote2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:autofillHints=""
@@ -89,10 +89,10 @@
             android:textColorHint="#757575"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionAmount" />
+            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionAmount2" />
 
         <Button
-            android:id="@+id/SaveTransactionButton"
+            android:id="@+id/SaveTransactionButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -100,11 +100,11 @@
             android:text="@string/SaveTransactionButtonText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionNote"
+            app:layout_constraintTop_toBottomOf="@+id/EditTextTransactionNote2"
             tools:ignore="TextContrastCheck" />
 
         <Button
-            android:id="@+id/CancelButton"
+            android:id="@+id/CancelButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#FF0000"
@@ -113,7 +113,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/SaveTransactionButton"
+            app:layout_constraintTop_toBottomOf="@+id/SaveTransactionButton2"
             app:layout_constraintVertical_bias="0.506"
             tools:ignore="TextContrastCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>

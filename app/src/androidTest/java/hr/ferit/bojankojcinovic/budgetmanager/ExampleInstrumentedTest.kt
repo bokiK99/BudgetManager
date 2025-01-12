@@ -1,4 +1,4 @@
-package hr.ferit.bojankojcinovic.aplikacijaaa
+package hr.ferit.bojankojcinovic.budgetmanager
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

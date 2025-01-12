@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/TextViewSignupTitleText"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -71,23 +71,27 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="40dp"
+        android:backgroundTint="#00CC00"
         android:text="@string/FinishSignupButtonText"
         app:layout_constraintBottom_toTopOf="@+id/CancelSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordConfirm" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordConfirm"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/CancelSignupButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="76dp"
+        android:backgroundTint="#FF0000"
         android:text="@string/CancelButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/textViewPasswordHelp"
